@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MT Universal Capital</title>
+  <meta name="description" content="MT Universal Capital — Private Investment Company. Advancing Trade. Empowering Markets. Engineering Impact." />
+
+  <style>
+    :root{
+      --bg:#070A0F;
+      --panel:#0D1220;
+      --panel2:#0B1020;
+      --text:#EAF0FF;
+      --muted:#B8C0D9;
+      --line:rgba(255,255,255,.10);
+      --accent:#7AA7FF;
+      --accent2:#7CFFB2;
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
+      --radius: 18px;
+      --max: 1160px;
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background:
+        radial-gradient(900px 600px at 10% -10%, rgba(122,167,255,.18), transparent 50%),
+        radial-gradient(900px 600px at 90% 0%, rgba(124,255,178,.12), transparent 55%),
+        radial-gradient(1100px 700px at 50% 110%, rgba(122,167,255,.10), transparent 55%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    a{ color:inherit; text-decoration:none; }
+    .container{ width: min(var(--max), calc(100% - 40px)); margin:0 auto; }
+
+    /* Top Nav */
+    header{
+      position:sticky; top:0; z-index:20;
+      backdrop-filter: blur(10px);
+      background: linear-gradient(to bottom, rgba(7,10,15,.85), rgba(7,10,15,.55));
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+    }
+    .brand{
+      display:flex; gap:12px; align-items:center;
+      letter-spacing:.2px;
+    }
+    .logo{
+      width:38px; height:38px; border-radius:12px;
+      background: linear-gradient(135deg, rgba(122,167,255,.9), rgba(124,255,178,.75));
+      box-shadow: 0 10px 30px rgba(122,167,255,.18);
+      position:relative;
+    }
+    .logo:after{
+      content:"";
+      position:absolute; inset:9px;
+      border-radius:10px;
+      background: rgba(7,10,15,.55);
+      border:1px solid rgba(255,255,255,.10);
+    }
+    .brand h1{ margin:0; font-size:14px; font-weight:800; }
+    .brand p{ margin:0; font-size:12px; color:var(--muted); }
+
+    .navlinks{
+      display:flex; gap:18px; align-items:center;
+      font-size:13px; color:var(--muted);
+    }
+    .navlinks a{ padding:8px 10px; border-radius:12px; }
+    .navlinks a:hover{ background: rgba(255,255,255,.06); color:var(--text); }
+
+    .cta{
+      display:flex; gap:10px; align-items:center;
+    }
+    .btn{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:10px 14px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      color:var(--text);
+      font-weight:700;
+      font-size:13px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.18);
+    }
+    .btn:hover{ background: rgba(255,255,255,.10); }
+    .btn.primary{
+      border:1px solid rgba(122,167,255,.45);
+      background: linear-gradient(135deg, rgba(122,167,255,.24), rgba(124,255,178,.14));
+    }
+
+    /* Hero */
+    .hero{
+      padding:58px 0 34px;
+    }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:26px;
+      align-items:stretch;
+    }
+    .badge{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      color:var(--muted);
+      font-size:12px;
+      width:max-content;
+    }
+    .dot{
+      width:8px; height:8px; border-radius:999px;
+      background: var(--accent2);
+      box-shadow: 0 0 18px rgba(124,255,178,.45);
+    }
+    .hero h2{
+      margin:14px 0 10px;
+      font-size:44px;
+      line-height:1.12;
+      letter-spacing:-.7px;
+    }
+    .hero h2 span{
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      -webkit-background-clip:text; background-clip:text;
+      color:transparent;
+    }
+    .lead{
+      color:var(--muted);
+      font-size:15px;
+      margin: 0 0 18px;
+      max-width: 62ch;
+    }
+    .pillRow{ display:flex; flex-wrap:wrap; gap:10px; margin: 18px 0 22px; }
+    .pill{
+      padding:10px 12px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.05);
+      color:var(--muted);
+      font-size:12px;
+    }
+    .panel{
+      background: linear-gradient(180deg, rgba(13,18,32,.85), rgba(11,16,32,.85));
+      border:1px solid rgba(255,255,255,.10);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .heroCard{
+      padding:18px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+    .officeImg{
+      width:100%;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.10);
+      overflow:hidden;
+      aspect-ratio: 16/11;
+      background: rgba(255,255,255,.04);
+    }
+    .officeImg img{
+      width:100%; height:100%;
+      object-fit: cover;
+      display:block;
+      filter: saturate(1.06) contrast(1.04);
+    }
+    .heroMeta{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+    }
+    .metaBox{
+      padding:12px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.05);
+    }
+    .metaBox .k{ font-size:11px; color:var(--muted); margin-bottom:6px; }
+    .metaBox .v{ font-size:14px; font-weight:800; }
+
+    /* Sections */
+    section{ padding: 34px 0; }
+    .sectionTitle{
+      display:flex; align-items:flex-end; justify-content:space-between;
+      gap:18px;
+      margin-bottom:16px;
+    }
+    .sectionTitle h3{
+      margin:0;
+      font-size:18px;
+      letter-spacing:.2px;
+    }
+    .sectionTitle p{
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+      max-width:60ch;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+    }
+    .card{
+      padding:16px;
+      border-radius: var(--radius);
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.05);
+      min-height: 136px;
+    }
+    .card h4{ margin: 0 0 8px; font-size:14px; }
+    .card p{ margin:0; color:var(--muted); font-size:13px; }
+
+    .twoCol{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+      align-items:stretch;
+    }
+    .aboutBox{
+      padding:18px;
+      border-radius: var(--radius);
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.05);
+    }
+    .aboutBox p{ margin:0; color:var(--muted); font-size:13.5px; }
+    .aboutBox strong{ color:var(--text); }
+
+    .mapBox{
+      padding: 14px;
+      border-radius: var(--radius);
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.05);
+    }
+    .mapFrame{
+      width:100%;
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:16px;
+      overflow:hidden;
+      aspect-ratio: 16/10;
+      background: rgba(255,255,255,.04);
+    }
+    iframe{ width:100%; height:100%; border:0; display:block; }
+
+    .footer{
+      padding: 26px 0 40px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:12px;
+    }
+    .footerRow{
+      display:flex; flex-wrap:wrap;
+      justify-content:space-between; gap:14px;
+      align-items:flex-start;
+    }
+    .footLinks{ display:flex; gap:14px; flex-wrap:wrap; }
+    .footLinks a{ color:var(--muted); }
+    .footLinks a:hover{ color:var(--text); }
+
+    /* Responsive */
+    @media (max-width: 940px){
+      .heroGrid{ grid-template-columns:1fr; }
+      .cards{ grid-template-columns: 1fr; }
+      .twoCol{ grid-template-columns: 1fr; }
+      .hero h2{ font-size:36px; }
+      .navlinks{ display:none; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <div>
+            <h1>MT Universal Capital</h1>
+            <p>Private Investment Company</p>
+          </div>
+        </div>
+
+        <nav class="navlinks" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#focus">Investment Focus</a>
+          <a href="#location">Location</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="cta">
+          <a class="btn primary" href="#contact">Request a Meeting</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <div class="container hero">
+      <div class="heroGrid">
+        <div>
+          <div class="badge"><span class="dot"></span> Privately Held • Institutional Discipline • Execution Clarity</div>
+
+          <h2>
+            Strategic capital deployment for <span>real assets</span> and essential markets.
+          </h2>
+
+          <p class="lead">
+            <strong>MT Universal Capital</strong> is a privately governed investment company headquartered in Dhaka, Bangladesh.
+            We allocate capital across <strong>real estate</strong> and <strong>daily essential commodities</strong> through disciplined frameworks,
+            risk calibration, and data-informed decision-making.
+          </p>
+
+          <div class="pillRow" role="list">
+            <div class="pill" role="listitem">Motto: Advancing Trade. Empowering Markets. Engineering Impact.</div>
+            <div class="pill" role="listitem">AUM: ৳100 Million (Approx.)</div>
+            <div class="pill" role="listitem">Established: January 24, 2020</div>
+            <div class="pill" role="listitem">Team: 80–100 Professionals</div>
+          </div>
+
+          <div class="cta">
+            <a class="btn primary" href="#about">Explore Our Profile</a>
+            <a class="btn" href="#location">View Headquarters</a>
+          </div>
+        </div>
+
+        <aside class="panel heroCard" aria-label="Office Preview">
+          <div class="officeImg">
+            <!-- Put your office image here: assets/office.png -->
+            <img src="assets/office.png" alt="MT Universal Capital office interior" />
+          </div>
+
+          <div class="heroMeta">
+            <div class="metaBox">
+              <div class="k">Founder</div>
+              <div class="v">MD Mainul Alam</div>
+            </div>
+            <div class="metaBox">
+              <div class="k">Headquarters</div>
+              <div class="v">Panthapath, Dhaka</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <div class="sectionTitle">
+          <div>
+            <h3>About MT Universal Capital</h3>
+            <p>
+              A private investment platform built on governance precision, capital efficiency, and resilient portfolio engineering.
+            </p>
+          </div>
+        </div>
+
+        <div class="twoCol">
+          <div class="aboutBox">
+            <p>
+              Founded on <strong>January 24, 2020</strong>, MT Universal Capital is structured to identify high-conviction opportunities
+              through disciplined underwriting, sector intelligence, and execution rigor. We prioritize
+              <strong>capital preservation</strong> alongside <strong>scalable value creation</strong>.
+            </p>
+          </div>
+
+          <div class="aboutBox">
+            <p>
+              Our operating model integrates risk-aware frameworks and market analytics to navigate volatility and sustain performance.
+              The firm is supported by a professional workforce of <strong>80–100</strong>, enabling operational depth and
+              institutional-grade execution.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOCUS -->
+    <section id="focus">
+      <div class="container">
+        <div class="sectionTitle">
+          <div>
+            <h3>Investment Focus</h3>
+            <p>
+              Targeted allocation across resilient sectors with measurable demand, scalable operations, and durable asset value.
+            </p>
+          </div>
+        </div>
+
+        <div class="cards">
+          <div class="card">
+            <h4>Real Estate Assets</h4>
+            <p>
+              Acquisition and development strategies designed for long-horizon appreciation, cashflow resilience, and asset quality.
+            </p>
+          </div>
+          <div class="card">
+            <h4>Daily Essential Commodities</h4>
+            <p>
+              Structured trading and distribution aligned with liquidity, demand stability, and supply-chain execution discipline.
+            </p>
+          </div>
+          <div class="card">
+            <h4>Strategic Portfolio Architecture</h4>
+            <p>
+              Risk-calibrated deployment with governance integrity, performance optimization, and scalable capital frameworks.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section id="location">
+      <div class="container">
+        <div class="sectionTitle">
+          <div>
+            <h3>Headquarters</h3>
+            <p>
+              59/D, (Just behind Square Hospital), Panthapath, Farmgate, Dhaka, Bangladesh
+            </p>
+          </div>
+          <div class="pill">Open in Maps: <a href="https://maps.app.goo.gl/QzYgMZjoKmr7Z76J6" target="_blank" rel="noopener">Google Maps</a></div>
+        </div>
+
+        <div class="twoCol">
+          <div class="aboutBox">
+            <p>
+              <strong>Address:</strong><br/>
+              59/D, (Just behind Square Hospital)<br/>
+              Panthapath, Farmgate<br/>
+              Dhaka, Bangladesh
+            </p>
+            <p style="margin-top:12px;">
+              <strong>Operational Note:</strong> For scheduled meetings, please contact us in advance to arrange a confirmed time slot.
+            </p>
+          </div>
+
+          <div class="mapBox">
+            <div class="mapFrame" aria-label="Google Maps Location">
+              <!-- Map embed. If it doesn't render due to browser/region policy, the "Open in Maps" link above will always work. -->
+              <iframe
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=Square%20Hospital%20Ltd,%20Panthapath,%20Dhaka&output=embed"
+                title="MT Universal Capital - Map">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="sectionTitle">
+          <div>
+            <h3>Contact</h3>
+            <p>
+              For partnerships, investment discussions, or corporate inquiries, connect through the channels below.
+            </p>
+          </div>
+        </div>
+
+        <div class="twoCol">
+          <div class="aboutBox">
+            <p><strong>Company:</strong> MT Universal Capital</p>
+            <p><strong>Type:</strong> Private Investment Company</p>
+            <p><strong>Founder:</strong> MD Mainul Alam</p>
+            <p><strong>AUM:</strong> ৳100 Million (Approx.)</p>
+          </div>
+
+          <div class="aboutBox">
+            <!-- Replace placeholders with your real contact info -->
+            <p><strong>Email:</strong> info@mtuniversalcapital.com</p>
+            <p><strong>Phone:</strong> +880 1XXXXXXXXX</p>
+            <p><strong>Hours:</strong> Sun–Thu • 10:00–18:00</p>
+            <p style="margin-top:12px;">
+              <a class="btn primary" href="mailto:info@mtuniversalcapital.com">Email Us</a>
+              <a class="btn" href="https://maps.app.goo.gl/QzYgMZjoKmr7Z76J6" target="_blank" rel="noopener">Get Directions</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footerRow">
+          <div>
+            <div style="font-weight:800; color:var(--text); margin-bottom:6px;">MT Universal Capital</div>
+            <div>Advancing Trade. Empowering Markets. Engineering Impact.</div>
+          </div>
+
+          <div class="footLinks">
+            <a href="#about">About</a>
+            <a href="#focus">Focus</a>
+            <a href="#location">Location</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+
+        <div style="margin-top:16px; opacity:.9;">
+          © <span id="year"></span> MT Universal Capital. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Auto year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
